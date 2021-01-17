@@ -15,6 +15,9 @@
 		3D2A855225B40AE400FF6920 /* WhatsForDinner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A855025B40AE400FF6920 /* WhatsForDinner.xcdatamodeld */; };
 		3D2A855D25B40AE400FF6920 /* WhatsForDinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A855C25B40AE400FF6920 /* WhatsForDinnerTests.swift */; };
 		3D2A856825B40AE400FF6920 /* WhatsForDinnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A856725B40AE400FF6920 /* WhatsForDinnerUITests.swift */; };
+		3D2A857C25B40BAF00FF6920 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A857B25B40BAF00FF6920 /* Restaurant.swift */; };
+		3D2A858425B40D3100FF6920 /* RestaurantPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A858325B40D3100FF6920 /* RestaurantPicker.swift */; };
+		3D2A858A25B4117D00FF6920 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A858925B4117D00FF6920 /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		3D2A856325B40AE400FF6920 /* WhatsForDinnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsForDinnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D2A856725B40AE400FF6920 /* WhatsForDinnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsForDinnerUITests.swift; sourceTree = "<group>"; };
 		3D2A856925B40AE400FF6920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D2A857B25B40BAF00FF6920 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		3D2A858325B40D3100FF6920 /* RestaurantPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPicker.swift; sourceTree = "<group>"; };
+		3D2A858925B4117D00FF6920 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 		3D2A854425B40AE200FF6920 /* WhatsForDinner */ = {
 			isa = PBXGroup;
 			children = (
+				3D2A857A25B40B9F00FF6920 /* Views */,
+				3D2A857825B40B7500FF6920 /* Models */,
 				3D2A854525B40AE200FF6920 /* WhatsForDinnerApp.swift */,
 				3D2A854725B40AE200FF6920 /* ContentView.swift */,
 				3D2A854925B40AE400FF6920 /* Assets.xcassets */,
@@ -134,6 +142,31 @@
 				3D2A856925B40AE400FF6920 /* Info.plist */,
 			);
 			path = WhatsForDinnerUITests;
+			sourceTree = "<group>";
+		};
+		3D2A857825B40B7500FF6920 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D2A857B25B40BAF00FF6920 /* Restaurant.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D2A857A25B40B9F00FF6920 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D2A858825B4113100FF6920 /* Widgets */,
+				3D2A858325B40D3100FF6920 /* RestaurantPicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3D2A858825B4113100FF6920 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				3D2A858925B4117D00FF6920 /* PrimaryButton.swift */,
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2A857C25B40BAF00FF6920 /* Restaurant.swift in Sources */,
 				3D2A854F25B40AE400FF6920 /* Persistence.swift in Sources */,
 				3D2A855225B40AE400FF6920 /* WhatsForDinner.xcdatamodeld in Sources */,
 				3D2A854825B40AE200FF6920 /* ContentView.swift in Sources */,
+				3D2A858A25B4117D00FF6920 /* PrimaryButton.swift in Sources */,
+				3D2A858425B40D3100FF6920 /* RestaurantPicker.swift in Sources */,
 				3D2A854625B40AE200FF6920 /* WhatsForDinnerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
