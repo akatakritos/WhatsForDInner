@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct RestaurantPicker: View {
-    let restaurants = Restaurant.samples; // todo: load this from somewhere
+    @EnvironmentObject private var model: AppModel
     @State private var restaurant: Restaurant? = Restaurant.samples[0];
+
+    var restaurants: [Restaurant] { model.restaurants }
 
     var isLoaded: Bool { restaurant != nil }
 
@@ -65,5 +67,6 @@ struct RestaurantPicker: View {
 struct RestaurantPicker_Previews: PreviewProvider {
     static var previews: some View {
         RestaurantPicker()
+            .environmentObject(AppModel.sample())
     }
 }

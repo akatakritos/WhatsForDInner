@@ -17,7 +17,10 @@
 		3D2A856825B40AE400FF6920 /* WhatsForDinnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A856725B40AE400FF6920 /* WhatsForDinnerUITests.swift */; };
 		3D2A857C25B40BAF00FF6920 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A857B25B40BAF00FF6920 /* Restaurant.swift */; };
 		3D2A858425B40D3100FF6920 /* RestaurantPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A858325B40D3100FF6920 /* RestaurantPicker.swift */; };
-		3D2A858A25B4117D00FF6920 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A858925B4117D00FF6920 /* PrimaryButton.swift */; };
+		3D2A858A25B4117D00FF6920 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A858925B4117D00FF6920 /* Buttons.swift */; };
+		3D2A859525B5460B00FF6920 /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A859425B5460B00FF6920 /* SettingsPage.swift */; };
+		3D2A859A25B547B000FF6920 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A859925B547B000FF6920 /* AppModel.swift */; };
+		3D2A85A225B54DFE00FF6920 /* EditPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A85A125B54DFE00FF6920 /* EditPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +57,10 @@
 		3D2A856925B40AE400FF6920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D2A857B25B40BAF00FF6920 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		3D2A858325B40D3100FF6920 /* RestaurantPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPicker.swift; sourceTree = "<group>"; };
-		3D2A858925B4117D00FF6920 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		3D2A858925B4117D00FF6920 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		3D2A859425B5460B00FF6920 /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsPage.swift; path = WhatsForDinner/Views/SettingsPage.swift; sourceTree = SOURCE_ROOT; };
+		3D2A859925B547B000FF6920 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		3D2A85A125B54DFE00FF6920 /* EditPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				3D2A857B25B40BAF00FF6920 /* Restaurant.swift */,
+				3D2A859925B547B000FF6920 /* AppModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +164,8 @@
 			children = (
 				3D2A858825B4113100FF6920 /* Widgets */,
 				3D2A858325B40D3100FF6920 /* RestaurantPicker.swift */,
+				3D2A859425B5460B00FF6920 /* SettingsPage.swift */,
+				3D2A85A125B54DFE00FF6920 /* EditPage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,7 +173,7 @@
 		3D2A858825B4113100FF6920 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				3D2A858925B4117D00FF6920 /* PrimaryButton.swift */,
+				3D2A858925B4117D00FF6920 /* Buttons.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -301,9 +310,12 @@
 				3D2A857C25B40BAF00FF6920 /* Restaurant.swift in Sources */,
 				3D2A854F25B40AE400FF6920 /* Persistence.swift in Sources */,
 				3D2A855225B40AE400FF6920 /* WhatsForDinner.xcdatamodeld in Sources */,
+				3D2A859525B5460B00FF6920 /* SettingsPage.swift in Sources */,
+				3D2A859A25B547B000FF6920 /* AppModel.swift in Sources */,
 				3D2A854825B40AE200FF6920 /* ContentView.swift in Sources */,
-				3D2A858A25B4117D00FF6920 /* PrimaryButton.swift in Sources */,
+				3D2A858A25B4117D00FF6920 /* Buttons.swift in Sources */,
 				3D2A858425B40D3100FF6920 /* RestaurantPicker.swift in Sources */,
+				3D2A85A225B54DFE00FF6920 /* EditPage.swift in Sources */,
 				3D2A854625B40AE200FF6920 /* WhatsForDinnerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
