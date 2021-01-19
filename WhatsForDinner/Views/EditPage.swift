@@ -7,12 +7,16 @@
 
 import SwiftUI
 
+fileprivate func noop<T>(param: T) -> Void { }
+
 struct EditPage: View {
     let original: Restaurant?
+    let complete: (Restaurant) -> Void
     @State private var draft: Restaurant = Restaurant.empty
 
-    init(original: Restaurant? = nil) {
+    init(original: Restaurant? = nil, complete: @escaping (Restaurant) -> Void) {
         self.original = original
+        self.complete = complete
     }
 
     func createDraft() {
@@ -24,7 +28,7 @@ struct EditPage: View {
     }
 
     func update() {
-
+        complete(draft)
     }
 
     var body: some View {
@@ -48,8 +52,8 @@ struct EditForm: View {
 struct EditPage_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            EditPage(original: Restaurant.samples[0])
-            EditPage()
+            EditPage(original: Restaurant.samples[0], complete: noop)
+            EditPage(complete: noop)
         }
     }
 }

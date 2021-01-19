@@ -15,11 +15,22 @@ struct SettingsPage: View {
         model.restaurants.remove(atOffsets: offsets)
     }
 
+    func onSave(restaurant: Restaurant) {
+        let existingIndex = model.restaurants.firstIndex(where: { $0.id == restaurant.id })
+        if let indexToUpdate = existingIndex {
+            model.restaurants[indexToUpdate] = restaurant
+        } else {
+            model.restaurants.append(restaurant)
+        }
+
+    }
+
+
     var body: some View {
         NavigationView {
             List {
                 ForEach(model.restaurants) { restaurant in
-                    NavigationLink(destination: EditPage(original: restaurant)) {
+                    NavigationLink(destination: EditPage(original: restaurant, complete: onSave)) {
                         Text(restaurant.name)
                     }
                 }
@@ -29,7 +40,7 @@ struct SettingsPage: View {
             .navigationBarItems(
                 leading: EditButton(),
                 trailing:
-                    NavigationLink(destination: EditPage(original: nil)) {
+                    NavigationLink(destination: EditPage(original: nil, complete: onSave)) {
                         Image(systemName: "plus.circle")
                     }
             )
