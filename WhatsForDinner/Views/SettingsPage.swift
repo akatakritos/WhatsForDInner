@@ -18,8 +18,10 @@ struct SettingsPage: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(model.restaurants) {
-                    Text($0.name)
+                ForEach(model.restaurants) { restaurant in
+                    NavigationLink(destination: EditPage(original: restaurant)) {
+                        Text(restaurant.name)
+                    }
                 }
                 .onDelete(perform: onDelete)
             }
@@ -27,7 +29,7 @@ struct SettingsPage: View {
             .navigationBarItems(
                 leading: EditButton(),
                 trailing:
-                    NavigationLink(destination: EditPage()) {
+                    NavigationLink(destination: EditPage(original: nil)) {
                         Image(systemName: "plus.circle")
                     }
             )

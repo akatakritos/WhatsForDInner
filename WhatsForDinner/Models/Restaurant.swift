@@ -18,4 +18,8 @@ struct Restaurant: Identifiable, Equatable {
             Restaurant(id: UUID(uuidString: "e6b1f99c-8b18-4ed2-8156-36e0231b1797")!, name: "Culver's")
         ]
     }
+
+    static var empty: Restaurant {
+        Restaurant(id: UUID(), name: "")
+    }
 }
