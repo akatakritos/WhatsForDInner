@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import os
+
+fileprivate var log = Logger(subsystem: "View", category: "RestaurantPicker")
 
 struct RestaurantPicker: View {
     @EnvironmentObject private var model: AppModel
@@ -29,6 +32,7 @@ struct RestaurantPicker: View {
             attempt = restaurants.randomElement()!
         } while attempt == restaurant
 
+        log.debug("Found restaurant: [ \(attempt.name, privacy: .public)]")
         return attempt
     }
 
@@ -37,6 +41,7 @@ struct RestaurantPicker: View {
     }
 
     func pickAgain() {
+        log.info("Selecting from \(model.restaurants.count, privacy: .public) restaurants")
         restaurant = pickRestaurant()
     }
 
